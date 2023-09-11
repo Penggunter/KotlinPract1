@@ -20,7 +20,9 @@ class Fragment3 : Fragment() {
         val buttonToFragment1 = view.findViewById<Button>(R.id.button_back_fragment3)
 
         buttonToFragment1.setOnClickListener {
-            findNavController().navigate(R.id.action_fragment3_to_fragment1)
+            //findNavController().navigate(R.id.action_fragment3_to_fragment1)
+
+            System.exit(-1)
         }
 
         return view

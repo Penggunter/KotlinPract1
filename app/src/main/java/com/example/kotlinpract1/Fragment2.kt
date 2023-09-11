@@ -17,11 +17,13 @@ class Fragment2 : Fragment() {
         val buttonToFragment1 = view.findViewById<Button>(R.id.button_back_fragment2)
 
         buttonToFragment1.setOnClickListener {
-            val fragmentTransaction = parentFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragment_container, Fragment1())
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-            fragmentTransaction.commit()
+//            val fragmentTransaction = parentFragmentManager.beginTransaction()
+//            fragmentTransaction.replace(R.id.fragment_container, Fragment1())
+//            fragmentTransaction.addToBackStack(null)
+//            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+//            fragmentTransaction.commit()
+
+            System.exit(-1)
         }
 
         return view
