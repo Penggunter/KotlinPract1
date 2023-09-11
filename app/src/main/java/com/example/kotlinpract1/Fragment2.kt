@@ -16,6 +16,7 @@ class Fragment2 : Fragment() {
         val view = inflater.inflate(R.layout.fragment2, container, false)
         val buttonToFragment1 = view.findViewById<Button>(R.id.button_back_fragment2)
         // test comment
+        // test comment
 
         buttonToFragment1.setOnClickListener {
 //            val fragmentTransaction = parentFragmentManager.beginTransaction()
