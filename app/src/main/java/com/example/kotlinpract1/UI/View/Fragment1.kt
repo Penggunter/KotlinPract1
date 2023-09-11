@@ -1,4 +1,4 @@
-package com.example.kotlinpract1
+package com.example.kotlinpract1.UI.View
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.fragment.findNavController
+import com.example.kotlinpract1.R
 
 class Fragment1 : Fragment() {
     override fun onCreateView(
@@ -35,7 +36,7 @@ class Fragment1 : Fragment() {
         buttonToFragment3.setOnClickListener {
             findNavController().navigate(R.id.action_fragment1_to_fragment3)
         }
-
         return view
     }
 }
+

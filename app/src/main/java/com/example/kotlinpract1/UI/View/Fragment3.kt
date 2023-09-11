@@ -1,4 +1,4 @@
-package com.example.kotlinpract1
+package com.example.kotlinpract1.UI.View
 
 import android.os.Bundle
 import android.view.LayoutInflater
