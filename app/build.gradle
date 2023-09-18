@@ -16,6 +16,9 @@
 
             testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         }
+        buildFeatures {
+            viewBinding = true
+        }
 
         buildTypes {
             release {
@@ -33,13 +36,32 @@
     }
 
     dependencies {
-        def nav_version = "2.7.1"
-        // Kotlin
-    //    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    //    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+        def room_version = "2.5.2"
 
+        implementation("androidx.room:room-runtime:$room_version")
+        // To use Kotlin annotation processing tool (kapt)
+        //ksp("androidx.room:room-compiler:$room_version")
+
+
+        // optional - Kotlin Extensions and Coroutines support for Room
+        implementation("androidx.room:room-ktx:$room_version")
+
+        // optional - Test helpers
+        testImplementation("androidx.room:room-testing:$room_version")
+
+
+        def nav_version = "2.7.1"
         implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
         implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+        def camerax_version = "1.2.2"
+        implementation("androidx.camera:camera-core:${camerax_version}")
+        implementation("androidx.camera:camera-camera2:${camerax_version}")
+        implementation("androidx.camera:camera-lifecycle:${camerax_version}")
+        implementation("androidx.camera:camera-video:${camerax_version}")
+
+        implementation("androidx.camera:camera-view:${camerax_version}")
+        implementation("androidx.camera:camera-extensions:${camerax_version}")
 
         implementation 'androidx.core:core-ktx:1.10.1'
         implementation 'androidx.appcompat:appcompat:1.6.1'
