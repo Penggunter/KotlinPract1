@@ -21,8 +21,8 @@ class Fragment3 : Fragment() {
 
         buttonToFragment1.setOnClickListener {
             //findNavController().navigate(R.id.action_fragment3_to_fragment1)
-
-            System.exit(-1)
+            findNavController().navigate(R.id.action_fragment3_to_fragment1)
+            //System.exit(-1)
         }
 
         return view

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.kotlinpract1.R
 
 class Fragment2 : Fragment() {
@@ -23,8 +24,8 @@ class Fragment2 : Fragment() {
 //            fragmentTransaction.addToBackStack(null)
 //            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
 //            fragmentTransaction.commit()
-
-            System.exit(-1)
+            findNavController().navigate(R.id.action_fragment2_to_fragment1)
+            // System.exit(-1)
         }
 
         return view
