@@ -33,7 +33,7 @@ class Fragment2 : Fragment() {
 
     companion object {
         private const val TAG = "CameraXApp"
-        private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
+        private const val FILENAME_FORMAT = "yyyy-MM-dd-HH:mm:ss"
         val REQUIRED_PERMISSIONS =
             mutableListOf(
                 Manifest.permission.CAMERA,
@@ -144,10 +144,13 @@ class Fragment2 : Fragment() {
             put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/CameraX-Image")
         }
 
-        val file = File(
-            requireContext().getExternalFilesDir("Pictures/CameraX-Image/"),
-            "$FILENAME"
-        )
+        // Create the directory if it doesn't exist
+        val picturesDir = File(requireContext().getExternalFilesDir(null), "Pictures/CameraX-Image")
+        if (!picturesDir.exists()) {
+            picturesDir.mkdirs()
+        }
+
+        val file = File(picturesDir, "$FILENAME")
         file.appendText(name + "\n")
 
         // Create output options object which contains file + metadata
@@ -167,8 +170,7 @@ class Fragment2 : Fragment() {
                     Toast.makeText(requireContext(), "Err", Toast.LENGTH_SHORT).show()
                 }
 
-                override fun
-                        onImageSaved(output: ImageCapture.OutputFileResults) {
+                override fun onImageSaved(output: ImageCapture.OutputFileResults) {
                     val msg = "Photo capture succeeded"
                     Log.d("photo", msg)
                     Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()

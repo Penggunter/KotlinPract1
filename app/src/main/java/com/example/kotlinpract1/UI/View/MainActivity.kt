@@ -18,10 +18,9 @@ import com.example.kotlinpract1.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-
     companion object {
         private const val TAG = "CameraXApp"
-        private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
+        private const val FILENAME_FORMAT = "yyyy-MM-dd-HH:mm:ss"
         val REQUIRED_PERMISSIONS =
             mutableListOf(
                 android.Manifest.permission.CAMERA,
