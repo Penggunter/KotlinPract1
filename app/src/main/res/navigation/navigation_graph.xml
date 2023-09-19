@@ -30,5 +30,12 @@
         <action
             android:id="@+id/action_fragment2_to_fragment1"
             app:destination="@id/fragment1" />
+        <action
+            android:id="@+id/action_fragment2_to_addFragment"
+            app:destination="@id/addFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.kotlinpract1.UI.View.AddFragment"
+        android:label="AddFragment" />
 </navigation>
