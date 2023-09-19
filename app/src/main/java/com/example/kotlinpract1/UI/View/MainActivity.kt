@@ -11,7 +11,7 @@ import com.example.kotlinpract1.UI.StateHolder.ViewModel.MyViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
-
+    // init pract4
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
