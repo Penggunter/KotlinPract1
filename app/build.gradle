@@ -1,6 +1,8 @@
     plugins {
         id 'com.android.application'
         id 'org.jetbrains.kotlin.android'
+        // Kapt plugin
+        id 'kotlin-kapt'
     }
 
     android {
@@ -33,10 +35,30 @@
     }
 
     dependencies {
+
+        def room_version = "2.5.2"
+
+        implementation "androidx.room:room-runtime:$room_version"
+        annotationProcessor "androidx.room:room-compiler:$room_version"
+
+        // To use Kotlin annotation processing tool (kapt)
+        kapt "androidx.room:room-compiler:$room_version"
+
+        // optional - Test helpers
+        testImplementation "androidx.room:room-testing:$room_version"
+
+        // optional - Paging 3 Integration
+        implementation "androidx.room:room-paging:$room_version"
+
+        // Retrofit
+        def retrofit_version = "2.9.0"
+        implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
+        implementation("com.google.code.gson:gson:2.10.1")
+        implementation("com.squareup.retrofit2:converter-gson:$retrofit_version")
+
+
+        // Navigation API
         def nav_version = "2.7.1"
-        // Kotlin
-    //    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    //    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
         implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
         implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
@@ -49,3 +71,5 @@
         androidTestImplementation 'androidx.test.ext:junit:1.1.5'
         androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     }
+
+    apply plugin: 'kotlin-kapt'
