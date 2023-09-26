@@ -25,8 +25,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val students = listOf(
+            Student("Шевелёв Игорь", "ИКБО-25-21"),
+            Student("Вяся Пупкин", "ИКБО-100-23"),
+            Student("П Пупкин", "ИКБО-100-23"),
+            Student("Вяся Пупкин", "ИКБО-100-23"),
+            // Добавьте других студентов по аналогии
+        )
         setContent {
-            MyApp("Шевелёв Игорь", "ИКБО-25-21")
+            MyApp(students)
         }
     }
 }
