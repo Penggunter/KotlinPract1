@@ -17,23 +17,14 @@ import com.example.kotlinpract1.R
 import com.example.kotlinpract1.UI.StateHolder.ViewModel.MyViewModel
 
 class MainActivity : AppCompatActivity() {
-    // init pract6
+    // init pract8
 
     private lateinit var navController: NavController
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.fragment_container)
 
-//        setContent {
-//                // Пример использования Composable элемента с настроенными стилями
-//            StudentInfoUI(
-//                studentName = "Иванов Иван Иванович",
-//                groupName = "Группа 12345",
-//                modifier = Modifier.fillMaxSize().background(Color.White)
-//            )
-//        }
         setContent {
             MyApp("Шевелёв Игорь", "ИКБО-25-21")
         }
