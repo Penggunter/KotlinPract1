@@ -17,23 +17,19 @@ import com.example.kotlinpract1.R
 import com.example.kotlinpract1.UI.StateHolder.ViewModel.MyViewModel
 
 class MainActivity : AppCompatActivity() {
-    // init pract10
 
-    private lateinit var navController: NavController
-
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val students = listOf(
-            Student("", ""),
             Student("Шевелёв Игорь", "ИКБО-25-21"),
             Student("Иван Иванович", "ИКБО-100-23"),
             Student("Вася Васильев", "ИКБО-100-23"),
             Student("Пётр Петрович", "ИКБО-100-23")
         )
+
         setContent {
-            MyApp(students)
+            MyApp(students, applicationContext) // Передача контекста приложения
         }
     }
 }
