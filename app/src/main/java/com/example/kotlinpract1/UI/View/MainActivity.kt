@@ -17,7 +17,7 @@ import com.example.kotlinpract1.R
 import com.example.kotlinpract1.UI.StateHolder.ViewModel.MyViewModel
 
 class MainActivity : AppCompatActivity() {
-    // init pract88
+    // init pract9
 
     private lateinit var navController: NavController
 
