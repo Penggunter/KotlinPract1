@@ -10,6 +10,8 @@ import com.example.kotlinpract1.R
 import com.example.kotlinpract1.UI.StateHolder.ViewModel.MyViewModel
 
 class MainActivity : AppCompatActivity() {
+    // init pract6
+
     private lateinit var navController: NavController
 
     @SuppressLint("MissingInflatedId")
