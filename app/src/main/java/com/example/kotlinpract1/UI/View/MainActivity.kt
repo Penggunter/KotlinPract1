@@ -26,11 +26,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val students = listOf(
+            Student("", ""),
             Student("Шевелёв Игорь", "ИКБО-25-21"),
-            Student("Вяся Пупкин", "ИКБО-100-23"),
-            Student("П Пупкин", "ИКБО-100-23"),
-            Student("Вяся Пупкин", "ИКБО-100-23"),
-            // Добавьте других студентов по аналогии
+            Student("Иван Иванович", "ИКБО-100-23"),
+            Student("Вася Васильев", "ИКБО-100-23"),
+            Student("Пётр Петрович", "ИКБО-100-23")
         )
         setContent {
             MyApp(students)
