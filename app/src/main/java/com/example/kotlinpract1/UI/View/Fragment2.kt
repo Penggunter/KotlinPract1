@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinpract1.Data.DataSource.Product.ProductApi
+import com.example.kotlinpract1.Data.DataSource.Product.ProductRepository
 import com.example.kotlinpract1.R
 import com.example.kotlinpract1.UI.StateHolder.Adapters.ProductListAdapter
 import com.example.kotlinpract1.UI.StateHolder.ViewModel.ProductVM
@@ -19,14 +20,11 @@ import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
 class Fragment2 : Fragment() {
     private lateinit var binding: Fragment2Binding
     private lateinit var mProductVM: ProductVM;
 
-    override fun onResume() {
-        super.onResume()
-
-    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

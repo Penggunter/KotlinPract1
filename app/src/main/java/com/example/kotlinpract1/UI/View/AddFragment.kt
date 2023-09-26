@@ -13,33 +13,6 @@ import com.example.kotlinpract1.UI.StateHolder.ViewModel.ProductVM
 import com.example.kotlinpract1.databinding.AddFragmentBinding
 
 class AddFragment : Fragment() {
-//    private lateinit var binding: AddFragmentBinding
-//    private lateinit var mHardDiskVM: HardDiskDriverVM;
-//
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        binding = AddFragmentBinding.inflate(inflater, container, false)
-//
-//        mHardDiskVM = ViewModelProvider(this).get(HardDiskDriverVM::class.java)
-//
-//        binding.add.setOnClickListener {
-//            var tempName = binding.editText.text.toString()
-//            if (tempName.isEmpty()) {
-//                Toast.makeText(requireContext(), "Error", Toast.LENGTH_LONG).show()
-//            } else {
-//                var item = HardDiskDriver(0, tempName, "a")
-//                mHardDiskVM.addItem(item)
-//                findNavController().popBackStack()
-//            }
-//
-//        }
-//
-//
-//        return binding.root
-//    }
     private lateinit var binding: AddFragmentBinding
     private lateinit var mProductVM: ProductVM;
 
