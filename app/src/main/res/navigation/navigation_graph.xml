@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_fragment1_to_fragment3"
             app:destination="@id/fragment3" />
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/fragment2" />
     </fragment>
     <fragment
         android:id="@+id/fragment3"
@@ -18,6 +21,14 @@
         android:label="Fragment3" >
         <action
             android:id="@+id/action_fragment3_to_fragment1"
+            app:destination="@id/fragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.kotlinpract1.UI.View.Fragment2"
+        android:label="Fragment2" >
+        <action
+            android:id="@+id/action_fragment2_to_fragment1"
             app:destination="@id/fragment1" />
     </fragment>
 </navigation>
